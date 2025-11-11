@@ -8,18 +8,23 @@ package Modelo;
 public class Villano extends Personaje {
 
     private String indiceDificultad;
+    private boolean EsJefe;
     public Villano() {
     }
 
-    public Villano(String indiceDificultad, String Nombre, String textoATQespecial, String imagenPath, int ataque, int defensa, int hp, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
+    public Villano(String indiceDificultad, boolean EsJefe, String Nombre, String textoATQespecial, String imagenPath, int ataque, int defensa, int hp, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
         super(Nombre, textoATQespecial, imagenPath, ataque, defensa, hp, especial, inteligencia, costoEspecial, guardiaActiva);
         this.indiceDificultad = indiceDificultad;
+        this.EsJefe = EsJefe;
     }
 
+    public boolean isEsJefe() {
+        return EsJefe;
+    }
     
-
- 
-
+    public void setEsJefe(boolean EsJefe) {
+        this.EsJefe = EsJefe;
+    }
     public String getIndiceDificultad() {
         return indiceDificultad;
     }

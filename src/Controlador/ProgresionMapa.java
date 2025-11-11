@@ -8,6 +8,7 @@ package Controlador;
 public class ProgresionMapa {
     private int pisoActual;
     private final int PISO_MAX = 30;
+    private Encuentro encuentro;
 
     public ProgresionMapa() {
     }
@@ -26,5 +27,13 @@ public class ProgresionMapa {
         this.pisoActual = pisoActual;
     }
     
-   
+    public void progresion(){
+        //aqui implementar la subida de pisos, los encuentros aleatorios.
+        //if (piso <= PISO_MAX){
+        
+    //villanoActual = encuentro.generarVillano(){}
+        //implementrar metodo batalla(villanoActual)
+        //}else{victoria()}  <------------------------- implemenentar metodo para pantalla de victoria ya que se superó el piso Max
+        
+    }
 }

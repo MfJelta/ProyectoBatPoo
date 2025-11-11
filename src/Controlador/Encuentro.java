@@ -9,15 +9,24 @@ import java.util.Random;
  * @author artor
  */
 public class Encuentro {
-    private ProgresionMapa piso;
-    private Villano villanoGenerado;
 
-    public Encuentro(ProgresionMapa piso, Villano villanoGenerado) {
-        this.piso = piso;
-        this.villanoGenerado = villanoGenerado;
+    public Encuentro() {
     }
     
-    //private Villano generarVillano(){
-        //System.out.println("POR IMPLEMENTAR");}
-      
-    }
+    //private Villano generarVillano(ProgresionMapa piso){
+        //int nivel = piso.getPisoActual();
+        
+        //if (nivel <= 9 ) {
+            //sacar de la base de datos segun indice de dificultad
+        //}else if (nivel >10 && nivel <= 19) {
+            //sacar de la base de datos segun indice de dificultad
+        //}else if (nivel >20 && nivel <=30) {
+            //sacar de la base de datos segun indice de dificultad
+        //}else if (nivel == 10 || nivel == 20 || nivel == 30){
+            //sacar de la base de datos los villanos esJefe = true
+        //}
+    //despues return  villano;}
+ 
+}
+     
+    
