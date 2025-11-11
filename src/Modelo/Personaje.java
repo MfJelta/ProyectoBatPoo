@@ -7,7 +7,7 @@ package Modelo;
  */
 public abstract class Personaje {
     protected String Nombre,textoATQespecial, imagenPath;// para poder asignar a cada pj una imagen habra que guardar la dierecion de la imagen
-    protected int ataque,defensa,hp,especial, inteligencia, costoEspecial;
+    protected int ataque,defensa,hp,hpMax,especial, inteligencia, costoEspecial;
     protected boolean guardiaActiva;
     
     
@@ -28,25 +28,28 @@ public abstract class Personaje {
     protected int calcularDañoEspecial( int inteligencia, int inteligenciaobjetivo){
         int base = inteligencia - (inteligenciaobjetivo/2);
         if (base < 1 ) base = 1;
-        double factor = 0.85 + Math.random() * 0.3;
+        double factor = 0.85 + Math.random() * 0.5;
         return (int)Math.round(base * factor);
     }
 
     public Personaje() {
     }
 
-    public Personaje(String Nombre, String textoATQespecial, String imagenPath, int ataque, int defensa, int hp, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
+    public Personaje(String Nombre, String textoATQespecial, String imagenPath, int ataque, int defensa, int hp, int hpMax, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
         this.Nombre = Nombre;
         this.textoATQespecial = textoATQespecial;
         this.imagenPath = imagenPath;
         this.ataque = ataque;
         this.defensa = defensa;
         this.hp = hp;
+        this.hpMax = hpMax;
         this.especial = especial;
         this.inteligencia = inteligencia;
         this.costoEspecial = costoEspecial;
         this.guardiaActiva = guardiaActiva;
     }
+
+   
 
     
 
@@ -129,6 +132,14 @@ public abstract class Personaje {
 
     public void setImagenPath(String imagenPath) {
         this.imagenPath = imagenPath;
+    }
+
+    public int getHpMax() {
+        return hpMax;
+    }
+
+    public void setHpMax(int hpMax) {
+        this.hpMax = hpMax;
     }
     
     

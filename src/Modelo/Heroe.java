@@ -7,12 +7,26 @@ package Modelo;
  */
 public class Heroe extends Personaje {
     
+    private int nivel;
     public Heroe() {
     }
 
-    public Heroe(String Nombre, String textoATQespecial, String imagenPath, int ataque, int defensa, int hp, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
-        super(Nombre, textoATQespecial, imagenPath, ataque, defensa, hp, especial, inteligencia, costoEspecial, guardiaActiva);
+    public Heroe(int nivel, String Nombre, String textoATQespecial, String imagenPath, int ataque, int defensa, int hp, int hpMax, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
+        super(Nombre, textoATQespecial, imagenPath, ataque, defensa, hp, hpMax, especial, inteligencia, costoEspecial, guardiaActiva);
+        this.nivel = nivel;
     }
+
+   
+
+    public int getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
+    
 
     
 

@@ -9,6 +9,9 @@ public class ProgresionMapa {
     private int pisoActual;
     private final int PISO_MAX = 30;
     private Encuentro encuentro;
+    private Batalla batalla;
+    private Heroe heroe;
+    
 
     public ProgresionMapa() {
     }
@@ -28,6 +31,7 @@ public class ProgresionMapa {
     }
     
     public void progresion(){
+        batalla.batalla(, );
         //aqui implementar la subida de pisos, los encuentros aleatorios.
         //if (piso <= PISO_MAX){
         
