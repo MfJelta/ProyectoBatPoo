@@ -7,6 +7,7 @@ package Controlador;
  */
 public class ProgresionMapa {
     private int pisoActual;
+    private final int PISO_MAX = 30;
 
     public ProgresionMapa() {
     }
