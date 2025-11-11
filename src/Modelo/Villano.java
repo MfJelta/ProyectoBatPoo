@@ -11,14 +11,12 @@ public class Villano extends Personaje {
     public Villano() {
     }
 
-    public Villano(String indiceDificultad, String Nombre, int ataque, int defensa, int hp, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
-        super(Nombre, ataque, defensa, hp, especial, inteligencia, costoEspecial, guardiaActiva);
+    public Villano(String indiceDificultad, String Nombre, String textoATQespecial, int ataque, int defensa, int hp, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
+        super(Nombre, textoATQespecial, ataque, defensa, hp, especial, inteligencia, costoEspecial, guardiaActiva);
         this.indiceDificultad = indiceDificultad;
     }
 
-    
-
-    
+ 
 
     public String getIndiceDificultad() {
         return indiceDificultad;
@@ -30,8 +28,10 @@ public class Villano extends Personaje {
 
     @Override
     public void atacarFisico(Personaje objetivo) {
-        int daño = calculateDamage(this.ataque, objetivo.getDefensa());
-        objetivo.setHp(Math.max(0,objetivo.getHp() - daño));
+        int dannio = calculateDamage(this.ataque, objetivo.getDefensa());
+        if (objetivo.isGuardiaActiva()){
+        dannio = dannio/2;}
+        objetivo.setHp(Math.max(0,objetivo.getHp() - dannio));
         
         if(objetivo.isGuardiaActiva())
         {objetivo.setGuardiaActiva(false);
@@ -50,6 +50,8 @@ public class Villano extends Personaje {
         if(this.getEspecial() < this.costoEspecial )
         {return false;}
         int dannio = calcularDañoEspecial(this.inteligencia, objetivo.getInteligencia());
+        if (objetivo.isGuardiaActiva()){
+        dannio = dannio/2;}
         objetivo.setHp(Math.max(0, objetivo.getHp()-dannio));
         
         if(objetivo.isGuardiaActiva())

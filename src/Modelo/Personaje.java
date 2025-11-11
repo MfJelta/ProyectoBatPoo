@@ -6,7 +6,7 @@ package Modelo;
  * @author artor
  */
 public abstract class Personaje {
-    protected String Nombre;
+    protected String Nombre,textoATQespecial;
     protected int ataque,defensa,hp,especial, inteligencia, costoEspecial;
     protected boolean guardiaActiva;
     
@@ -34,8 +34,9 @@ public abstract class Personaje {
     public Personaje() {
     }
 
-    public Personaje(String Nombre, int ataque, int defensa, int hp, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
+    public Personaje(String Nombre, String textoATQespecial, int ataque, int defensa, int hp, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
         this.Nombre = Nombre;
+        this.textoATQespecial = textoATQespecial;
         this.ataque = ataque;
         this.defensa = defensa;
         this.hp = hp;
@@ -45,11 +46,6 @@ public abstract class Personaje {
         this.guardiaActiva = guardiaActiva;
     }
 
-    
-
-   
-
-  
 
     public String getNombre() {
         return Nombre;
@@ -113,6 +109,14 @@ public abstract class Personaje {
 
     public void setCostoEspecial(int costoEspecial) {
         this.costoEspecial = costoEspecial;
+    }
+
+    public String getTextoATQespecial() {
+        return textoATQespecial;
+    }
+
+    public void setTextoATQespecial(String textoATQespecial) {
+        this.textoATQespecial = textoATQespecial;
     }
     
     
