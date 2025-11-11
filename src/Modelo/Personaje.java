@@ -6,9 +6,10 @@ package Modelo;
  * @author artor
  */
 public abstract class Personaje {
-    protected String Nombre,textoATQespecial;
+    protected String Nombre,textoATQespecial, imagenPath;// para poder asignar a cada pj una imagen habra que guardar la dierecion de la imagen
     protected int ataque,defensa,hp,especial, inteligencia, costoEspecial;
     protected boolean guardiaActiva;
+    
     
     public abstract void atacarFisico(Personaje objetivo);
     
@@ -34,9 +35,10 @@ public abstract class Personaje {
     public Personaje() {
     }
 
-    public Personaje(String Nombre, String textoATQespecial, int ataque, int defensa, int hp, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
+    public Personaje(String Nombre, String textoATQespecial, String imagenPath, int ataque, int defensa, int hp, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
         this.Nombre = Nombre;
         this.textoATQespecial = textoATQespecial;
+        this.imagenPath = imagenPath;
         this.ataque = ataque;
         this.defensa = defensa;
         this.hp = hp;
@@ -45,6 +47,8 @@ public abstract class Personaje {
         this.costoEspecial = costoEspecial;
         this.guardiaActiva = guardiaActiva;
     }
+
+    
 
 
     public String getNombre() {
@@ -117,6 +121,14 @@ public abstract class Personaje {
 
     public void setTextoATQespecial(String textoATQespecial) {
         this.textoATQespecial = textoATQespecial;
+    }
+
+    public String getImagenPath() {
+        return imagenPath;
+    }
+
+    public void setImagenPath(String imagenPath) {
+        this.imagenPath = imagenPath;
     }
     
     

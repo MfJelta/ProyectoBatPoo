@@ -11,10 +11,12 @@ public class Villano extends Personaje {
     public Villano() {
     }
 
-    public Villano(String indiceDificultad, String Nombre, String textoATQespecial, int ataque, int defensa, int hp, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
-        super(Nombre, textoATQespecial, ataque, defensa, hp, especial, inteligencia, costoEspecial, guardiaActiva);
+    public Villano(String indiceDificultad, String Nombre, String textoATQespecial, String imagenPath, int ataque, int defensa, int hp, int especial, int inteligencia, int costoEspecial, boolean guardiaActiva) {
+        super(Nombre, textoATQespecial, imagenPath, ataque, defensa, hp, especial, inteligencia, costoEspecial, guardiaActiva);
         this.indiceDificultad = indiceDificultad;
     }
+
+    
 
  
 
