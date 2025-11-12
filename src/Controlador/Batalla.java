@@ -25,8 +25,8 @@ public class Batalla {
        boolean batallaTerminada = false;
        while (!batallaTerminada){
        if(turnoHeroe)
-       {//int numeroHabilidad = obtenerHabilidadSeleccionada();
-           switch (numeroHabilidad) {
+       {//int numeroHabilidad = obtenerHabilidadSeleccionada();                 <----------------------------------------------Esto hay que generarlo desde los botones de la interfaz grafica. por
+           switch (numeroHabilidad) { //<--------------------------------------------------generarlo desde la interfaz grafica
                case 1:
                    heroe.atacarFisico(villano);
                    break;
